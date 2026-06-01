@@ -92,7 +92,6 @@ The application stores the following details:
 
 ## Project Structure
 
-
 health-prediction-app/
 │
 ├── app.py
