@@ -35,6 +35,8 @@ class Patient(db.Model):
     cholesterol = db.Column(db.Float, nullable=False)
     remarks = db.Column(db.Text, nullable=True)
     admin_username = db.Column(db.String(50), nullable=False)
+with app.app_context():
+    db.create_all()
 
 # EXTERNAL AI HEALTHCARE API INTEGRATION FUNCTION
 def query_external_ml_api(glucose, cholesterol, haemoglobin):
@@ -102,15 +104,7 @@ def live_prediction_api():
 
 
 
-# DASHBOARD WORKSPACE
-# @app.route('/')
-# def home():
-#     search_query = request.args.get('search', '')
-#     if search_query:
-#         patients = Patient.query.filter(Patient.full_name.like(f"%{search_query}%")).all()
-#     else:
-#         patients = Patient.query.all()
-#     return render_template('index.html', patients=patients, is_logged_in=session.get('logged_in'), username=session.get('username'))
+
 # DASHBOARD WORKSPACE
 @app.route('/')
 def home():
