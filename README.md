@@ -87,11 +87,15 @@ The application stores the following details:
 ### API Integration
 
 * Hugging Face Inference API
+* Used for generating AI-powered health remarks based on patient blood test values.
 
 ---
 
 ## Project Structure
 
+## Project Structure
+
+```text
 health-prediction-app/
 │
 ├── app.py
@@ -120,7 +124,7 @@ health-prediction-app/
 │
 └── instance/
     └── patients.db
-
+```
 
 ---
 
