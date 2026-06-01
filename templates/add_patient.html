@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient Admission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <div class="header">
+        <div class="header-left">
+               
+                <div class="logo-section">
+                   <div class="logo-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                        <div class="logo-text">
+                         <a href="/" class="active"><h2 class="clinical-glow-text">MIRA AI</h2><p>HEALTH SYSTEMS</p></a>
+                    
+                    
+                        </div>
+                    </div>
+            
+        </div>
+             <button class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></button>
+
+    <div class="header-right-group" id="headerRightGroup">
+       <div class="header-buttons">
+                <a href="/add_patient"><i class="bi bi-person-plus-fill"></i> Add Patient</a>
+                <!-- Active class moved here since this is the reports page -->
+                <a href="/reports" class="active"><i class="bi bi-bar-chart-fill"></i> Reports</a>
+                <a href="/"><i class="bi bi-grid-fill"></i> Dashboard</a>
+                
+                <!-- Fixed Account Cluster -->
+                <div class="admin">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin Profile">
+                    
+                    <!-- Added correct wrapper container class -->
+                    <div class="admin-meta">
+                        <strong>{{ username if is_logged_in else 'Guest User' }}</strong>
+                        <small>{{ 'Admin' if is_logged_in else 'Read-Only Access' }}</small>
+                    </div>
+                    
+                    <!-- Cleaned up competing Bootstrap layout classes -->
+                </div>
+                                    <a href="/logout" class="btn btn-outline-danger btn-sm"><i class="bi bi-box-arrow-right"></i> Logout</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container-fluid py-4">
+            <!-- <div class="col-lg-11"></div> -->
+            <div class="card p-5 shadow-sm border-0 bg-white rounded-4">
+                <div class="d-flex align-items-center gap-3 mb-5 pb-3 border-bottom border-light">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
+                        <i class="bi bi-person-bounding-box fs-3"></i>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold text-dark m-0">Patient Intake Metrics</h3>
+                        <p class="text-muted small m-0">Compile and commit standard laboratory analytics data</p>
+                    </div>
+                
+                </div>
+
+                <form action="/add_patient" method="POST" id="patientForm">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Full Legal Name</label>
+                            <input type="text" name="full_name" id="full_name" class="form-control" required pattern="^[A-Za-z\s]{3,50}$" required placeholder="John Doe" autocomplete="off" title="Name must contain only letters (min 3 characters)">
+                           
+                            <div class="text-danger small mt-1 validation-msg" id="full_name_error"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Date of Birth</label>
+                            <input type="date" name="date_of_birth" class="form-control" required>
+                            <div class="invalid-feedback">Date of birth is required.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Email Address</label>
+                            <input type="email" name="email" class="form-control" required placeholder="johndoe@medical.com" autocomplete="off">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold text-secondary">Contact Number</label>
+                            <input type="tel" name="phone" class="form-control" pattern="^+[0-9]{10,15}" 
+           title="Please enter a valid phone number (10 digits)" required placeholder="+91" autocomplete="off">
+           <div class="invalid-feedback">Please enter a valid phone number (digits only).</div>
+                        </div>
+                        <div class="col-md-4">
+    <label class="form-label fw-semibold text-secondary">Glucose Index (mg/dL)</label>
+    <input type="number" step="0.1" min="0" max="1000" name="glucose" id="glucose" class="form-control" required placeholder="110" value="{{ patient.glucose if patient else '' }}">
+</div>
+<div class="col-md-4">
+    <label class="form-label fw-semibold text-secondary">Cholesterol Count (mg/dL)</label>
+    <input type="number" step="0.1" min="0" max="1000" name="cholesterol" id="cholesterol" class="form-control" required placeholder="190" value="{{ patient.cholesterol if patient else '' }}">
+</div>
+<div class="col-md-4">
+    <label class="form-label fw-semibold text-secondary">Haemoglobin Density (g/dL)</label>
+    <input type="number" step="0.1" min="0" max="15" name="haemoglobin" id="haemoglobin" class="form-control" required placeholder="14.5" value="{{ patient.haemoglobin if patient else '' }}">
+</div>
+<div class="col-12">
+    <label class="form-label fw-semibold text-secondary">AI Diagnostic Remarks</label>
+    <textarea name="remarks" id="remarks" class="form-control" rows="3" readonly></textarea>
+</div>
+                    </div>
+
+                    <div class="d-flex gap-3 mt-5">
+                        <button type="submit" id="submitBtn" class="btn btn-primary px-5  py-2 shadow-sm"><i class="bi bi-save2-fill me-2"></i>Commit Record</button>
+                        <a href="/" class="btn btn-outline-secondary px-4 py-2">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer-section">
+    <div class="footer-left">
+        <p>
+            © 2026 <strong>MIRA AI Health Systems</strong>.
+            All clinical parameters encrypted.
+        </p>
+    </div>
+
+    <div class="footer-right">
+        <a href="/" class="footer-link">
+            <i class="bi bi-house-fill"></i> Home
+        </a>
+
+        <a href="/privacy" class="footer-link">
+            <i class="bi bi-shield-lock-fill"></i> Privacy Policy
+        </a>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            Operational
+        </span>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- ADD THIS SCRIPT TAG AT THE VERY BOTTOM OF YOUR HTML FILES -->
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('headerRightGroup').classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
