@@ -1,5 +1,12 @@
 # MIRA AI Health Prediction Application
 
+## Project Links
+
+GitHub Repository:
+https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
+#Live Application:
+https://ai-health-prediction-app.onrender.com
+
 ## Project Description
 
 This project was developed as part of the Junior AI/ML Developer technical assessment.
