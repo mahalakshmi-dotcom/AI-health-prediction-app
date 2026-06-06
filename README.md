@@ -1,4 +1,4 @@
-# MIRA AI Health Prediction Application
+# Health Prediction Application
 
 ## Project Links
 
@@ -9,82 +9,88 @@ https://ai-health-prediction-app.onrender.com
 
 ## Project Description
 
-This project was developed as part of the Junior AI/ML Developer technical assessment.
+Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
 
-The application is designed to store the patient blood test information and generate AI-based health remarks using an external health prediction API. It provides a simple interface for managing patient records and viewing health risk predictions.
-
-The system allows users to add, view, update, and delete patient information while storing the data in a database for the future access.
-
----
+The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses an API to provide health risk predictions.
 
 ## Features
 
 ### Patient Management
 
-* Add new patient records
+* Add records
+
 * View patient records
+
 * Update patient information
+
 * Delete patient records
-* Search patients by name
 
-### User Authentication
-
-* Admin registration
-* Admin login
-* Secure password storage
-* Session-based access control
+* Search patient records
 
 ### Health Prediction
 
-* AI-generated health remarks
-* External API integration
-* Automatic risk assessment based on blood test values
-* Backup prediction logic when API service is unavailable
+* Generate health remarks based on blood test values like Glucose, Haemoglobin and Cholesterol
 
-### Reports Dashboard
+* Integrate with an API
 
-* View patient statistics
-* High Risk patient count
-* Moderate Risk patient count
-* Low Risk patient count
+* Have a prediction mechanism when API is down
+
+### Reports
+
+* View total patient records
+
+* View High Risk patient count
+
+* View Moderate Risk patient count
+
+* View Low Risk patient count
 
 ### Validation
 
-* Required field validation
-* Email format validation
-* Numeric validation for blood test values
-* Date validation
+* Check for required fields
 
----
+* Validate email addresses
+
+* Validate test values
+
+* Validate dates
 
 ## Patient Information
 
-The application stores the following details:
+The Health Prediction Application stores these details:
 
 * Full Name
-* Date of Birth
-* Email Address
-* Phone Number
-* Glucose Level
-* Haemoglobin Level
-* Cholesterol Level
-* AI Generated Remarks
 
----
+* Date of Birth
+
+* Email Address
+
+* Glucose Level
+
+* Haemoglobin Level
+
+* Cholesterol Level
+
+* Health Remarks
 
 ## Technologies Used
 
 ### Backend
 
 * Python
+
 * Flask
+
 * Flask-SQLAlchemy
 
 ### Frontend
 
 * HTML
+
 * CSS
+
 * Bootstrap
+
 * JavaScript
 
 ### Database
@@ -94,99 +100,108 @@ The application stores the following details:
 ### API Integration
 
 * Hugging Face Inference API
-* Used for generating AI-powered health remarks based on patient blood test values.
-
----
 
 ## Project Structure
 
-## Project Structure
 
-```text
 health-prediction-app/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── view_db.py
-│
-├── templates/
-│   ├── index.html
-│   ├── add_patient.html
-│   ├── edit_patient.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── reports.html
-│   └── privacy.html
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   └── script.js
-│   │
-│   └── images/
-│       └── banner.jpg
-│
-└── instance/
-    └── patients.db
-```
 
----
+│
+
+├── app.py
+
+├── requirements.txt
+
+├── README.md
+
+│
+
+├── templates/
+
+│   ├── index.html
+
+│   ├── add_patient.html
+
+│   ├── edit_patient.html
+
+│   ├── reports.html
+
+│   └── privacy.html
+
+│   └── view_db.html
+
+│
+
+├── static/
+
+│   ├── css/
+
+│   │   └── style.css
+
+│   │
+
+│   ├── js/
+
+│   │   └── script.js
+
+│   │
+
+│   └── images/
+
+│       └── banner.jpg
+
 
 ## Installation
 
-### 1. Install Dependencies
+### Install Dependencies
+
+To install dependencies run this command:
+
+bash
+
 pip install -r requirements.txt
 
-### 2. Create Environment Variables
-Create a .env file and add:
+### Configure Environment Variables
+
+Create a.env file. Add these lines:
 
 HF_API_KEY=your_api_key
+
 SECRET_KEY=your_secret_key
 
 
-### 3. Run the Application
+### Run Application
+
+To run the application use this command:
+
+bash
 
 python app.py
 
 
-### 4. Open in Browser
 
-text
-http://127.0.0.1:5000
+### Open in Browser
 
+http://127.0.0.1:5000 in your browser.
 
----
+## Learning Outcomes
 
-## What I Learned
+Building the Health Prediction Application was an experience. I learned about building web applications using Flask. I worked with SQLite databases. Implemented add, view, update and delete operations. I integrated APIs. Performed form validation. I created web pages. Managed data for the Health Prediction Application.
 
-While developing this project, I gained practical experience in:
+## Future Enhancements
 
-* Building the web applications using Flask
-* Working with SQLite databases
-* Implementing CRUD operations
-* Integrating external APIs
-* Handling user authentication
-* Validating user input
-* Creating responsive web pages
-* Working with the AI-powered services
+Some ideas for enhancements are:
 
----
+* Generate PDF reports for the Health Prediction Application
 
-## Future Improvements
+* Send email notifications for the Health Prediction Application
 
-* PDF report generation
-* Email notifications
-* Patient history tracking
-* Advanced health analytics
-* Cloud database integration
+* Track patient history for the Health Prediction Application
 
----
+* Enhance health analytics, for the Health Prediction Application
 
 ## Developed By
 
-Mahalakshmi Setti
+Mahalakshmi Setti,
 
-B.Tech
+B.Tech.
