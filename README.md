@@ -3,8 +3,8 @@
 * GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
 * Live Application: https://ai-health-prediction-app.onrender.com
 # Project Description
-*Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
-*The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
+* Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
+* The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
 # Features
 ## Patient Management
   * Add records.
@@ -77,7 +77,7 @@ health-prediction-app/
 # Installation
 ## Install Dependencies
 -->To install dependencies run this command:
-bash:
+* bash
 ```pip install -r requirements.txt```
 # Configure Environment Variables
 -->Create a.env file. Add these lines:
@@ -85,7 +85,7 @@ bash:
   * SECRET_KEY=your_secret_key
 # Run Application
 -->To run the application use this command:
-bash
+* bash
 ```python app.py```
 # Open in Browser for Localhost
 http://127.0.0.1:5000 in your browser.
