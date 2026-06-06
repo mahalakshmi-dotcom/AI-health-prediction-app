@@ -1,11 +1,11 @@
 # Health Prediction Application
 # Project Links
-GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app.
-Live Application: https://ai-health-prediction-app.onrender.com
+* GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
+* Live Application: https://ai-health-prediction-app.onrender.com
 # Project Description
-Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
-The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
-**Features
+-->Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
+-->The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
+## Features
 # Patient Management
   * Add records.
   * View patient records.
@@ -27,7 +27,7 @@ The application allows users to add, view, update and delete patient records. It
   * Validate test values
   * Validate dates
 # Patient Information
-The Health Prediction Application stores these details:
+-->The Health Prediction Application stores these details:
   * Full Name
   * Email Address
   * Glucose Level
@@ -35,21 +35,21 @@ The Health Prediction Application stores these details:
   * Cholesterol Level
   * Health Remarks
 # Technologies Used
- #Backend
+ # Backend
   * Python
   * Flask
   * Flask-SQLAlchemy
- #Frontend
+ # Frontend
   * HTML
   * CSS
   * Bootstrap
   * JavaScript
- #Database
+ # Database
   * SQLite
-#API Integration
+# API Integration
 * Hugging Face Interface API
-#Project Structure
-'''
+# Project Structure
+```
 health-prediction-app/
 |
 |--app.py
@@ -73,20 +73,20 @@ health-prediction-app/
 |  |  |--banner.jpg
 |  |  |--logo.jpg
 |
-'''
+```
 # Installation
 # Install Dependencies
-To install dependencies run this command:
+-->To install dependencies run this command:
 bash:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 # Configure Environment Variables
-Create a.env file. Add these lines:
+-->Create a.env file. Add these lines:
 HF_API_KEY=your_api_key
 SECRET_KEY=your_secret_key
 # Run Application
-To run the application use this command:
+-->To run the application use this command:
 bash
-python app.py
+```python app.py```
 # Open in Browser for Localhost
 http://127.0.0.1:5000 in your browser.
 # Learning Outcomes
