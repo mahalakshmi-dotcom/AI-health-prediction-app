@@ -3,30 +3,30 @@
 * GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
 * Live Application: https://ai-health-prediction-app.onrender.com
 # Project Description
--->Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
--->The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
-## Features
-# Patient Management
+*Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
+*The application allows users to add, view, update and delete patient records. It stores data in a SQLite database. The Health Prediction Application uses and API to provide health risk predictions.
+# Features
+## Patient Management
   * Add records.
   * View patient records.
   * Update patient information.
   * Delete patient records.
   * Search patient records.
-# Health Prediction
+## Health Prediction
   * Generate health remarks based on blood test values like Glucose, Haemoglobin and Cholestrol.
   * Integrate with an API.
   * Have a prediction mechanism when API is down.
-# Reports
+## Reports
   * View total patient records.
   * View High Risk patient count.
   * View Moderate Risk patient count.
   * View Low Risk patient count.
-# Validation
+## Validation
   * Check for required fields.
   * validate email addresses
   * Validate test values
   * Validate dates
-# Patient Information
+## Patient Information
 -->The Health Prediction Application stores these details:
   * Full Name
   * Email Address
@@ -35,16 +35,16 @@
   * Cholesterol Level
   * Health Remarks
 # Technologies Used
- # Backend
+ ## Backend
   * Python
   * Flask
   * Flask-SQLAlchemy
- # Frontend
+ ## Frontend
   * HTML
   * CSS
   * Bootstrap
   * JavaScript
- # Database
+ ## Database
   * SQLite
 # API Integration
 * Hugging Face Interface API
@@ -75,14 +75,14 @@ health-prediction-app/
 |
 ```
 # Installation
-# Install Dependencies
+## Install Dependencies
 -->To install dependencies run this command:
 bash:
 ```pip install -r requirements.txt```
 # Configure Environment Variables
 -->Create a.env file. Add these lines:
-HF_API_KEY=your_api_key
-SECRET_KEY=your_secret_key
+  * HF_API_KEY=your_api_key
+  * SECRET_KEY=your_secret_key
 # Run Application
 -->To run the application use this command:
 bash
