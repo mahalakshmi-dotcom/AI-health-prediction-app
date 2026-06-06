@@ -5,7 +5,7 @@
 GitHub Repository:
 https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
 #Live Application:
-https://ai-health-prediction-app.onrender.com
+
 
 ## Project Description
 
