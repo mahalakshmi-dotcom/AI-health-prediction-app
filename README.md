@@ -1,6 +1,6 @@
 # Health Prediction Application
 # Project Links
-GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app
+GitHub Repository: https://github.com/mahalakshmi-dotcom/AI-health-prediction-app.
 Live Application: https://ai-health-prediction-app.onrender.com
 # Project Description
 Health Prediction Application is a web-based application built using Python and Flask. This application helps users manage health records and predicts health risks based on blood test values.
@@ -49,6 +49,7 @@ The Health Prediction Application stores these details:
 #API Integration
 * Hugging Face Interface API
 #Project Structure
+'''
 health-prediction-app/
 |
 |--app.py
@@ -72,6 +73,7 @@ health-prediction-app/
 |  |  |--banner.jpg
 |  |  |--logo.jpg
 |
+'''
 # Installation
 # Install Dependencies
 To install dependencies run this command:
