@@ -81,8 +81,8 @@ health-prediction-app/
 ```pip install -r requirements.txt```
 # Configure Environment Variables
 -->Create a.env file. Add these lines:
-  * HF_API_KEY=your_api_key
-  * SECRET_KEY=your_secret_key
+ * ``` HF_API_KEY=your_api_key ```
+ * ``` SECRET_KEY=your_secret_key ```
 # Run Application
 -->To run the application use this command:
 * bash
