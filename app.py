@@ -158,6 +158,9 @@ def reports():
         obs_count=observation_required, 
         normal_count=normal_status,
     )
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
 with app.app_context():
     db.create_all()
 if __name__ == '__main__':
